@@ -1,0 +1,21 @@
+﻿div[name="current-time"] {
+    float: right;
+    border: 1px solid darkgrey;
+    -moz-border-radius: inherit;
+    -webkit-border-radius: inherit;
+    border-radius: inherit;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+}
+
+.dim {
+    color: grey;
+}

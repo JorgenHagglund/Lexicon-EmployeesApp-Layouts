@@ -5,11 +5,39 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css">
+    <link rel="stylesheet" href="/CSS/Styles.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"
+            asp-fallback-src="/JavaScript/jquery/jquery.min.js"
+            asp-fallback-test="window.jQuery">
+    </script>
+    <script>
+        $(function () {
+            setInterval(function () {
+                let currentTime = new Date();
+                $('p[name="current-time"').text(currentTime.toLocaleTimeString(["sv-SE"], { hour: '2-digit', minute: '2-digit', second: '2-digit' }));
+            }, 1000); // Update every second
+        });
+    </script>
 </head>
 <body style="margin: 50px;">
+    <partial name="_TimeBox" class="fixed-top" />
+    <header>
+        <h1>Employees App</h1>
+        <nav>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Employees" asp-action="Create">Add an employee</a></li>
+            </ul>
+        </nav>
+    </header>
     <div>
         @RenderBody()
     </div>
+    <partial name="_TimeBox" class="fixed-bottom" />
+    <footer>
+        <p>&copy; 2025 Lexicon .NET 2025VT Grupp 8</p>
+        <p>Created by <i>Jörgen Hägglund, Tobias Johansson, <span class="dim">Bror Johansson</span></i></p>
+    </footer>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
