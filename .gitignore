@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/EmployeesApp.Web/wwwroot/JavaScript/jquery/jquery.min.js
+/EmployeesApp.Web/wwwroot/JavaScript/jquery/jquery.min.map
+/EmployeesApp.Web/wwwroot/JavaScript/jquery-validate/jquery.validate.min.js
+/EmployeesApp.Web/wwwroot/JavaScript/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js
